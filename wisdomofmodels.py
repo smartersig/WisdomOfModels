@@ -35,7 +35,7 @@ def plotRes(data):
       sign = ''
       if pl > 0:
         sign = '+'
-      outLine = str(colListText) + ' Bets ' + str(bets) + ' PL ' + sign + str(pl) + ' ROI ' + str(roi) + '%'
+      outLine = 'Top Rated ' + str(colListText) + ' Bets ' + str(bets) + ' PL ' + sign + str(pl) + ' ROI ' + str(roi) + '%'
       st.write(outLine)
       data = data[data['totRankPos'] == 1]
       binpls = data.groupby(pd.cut(data.BFSP, [0,5,10,15,20,30,40,50,100,1000])).PL.sum()
